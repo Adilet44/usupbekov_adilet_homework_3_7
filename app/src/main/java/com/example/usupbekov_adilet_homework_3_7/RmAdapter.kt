@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.usupbekov_adilet_homework_3_7.databinding.ItemListBinding
 
-class RmAdapter (private val rmList: ArrayList<Rm>,private val onClick: (rm:Rm) -> Unit) :
+class RmAdapter (private val rmList: ArrayList<Rm>,
+                 private val onClick: (rm:Rm) -> Unit) :
     Adapter<RmAdapter.RmViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RmViewHolder {
@@ -27,9 +28,9 @@ class RmAdapter (private val rmList: ArrayList<Rm>,private val onClick: (rm:Rm) 
             val item = rmList[adapterPosition]
 
             binding.apply {
-                tvLife.text = item.life
-                tvName.text = item.name
-                imgPicture.setImageResource(item.picture)
+                tvLife12.text = item.life
+                tvName12.text = item.name
+                imgCharacter12.setImageResource(item.picture)
             }
             itemView.setOnClickListener{
                 onClick.invoke(item)

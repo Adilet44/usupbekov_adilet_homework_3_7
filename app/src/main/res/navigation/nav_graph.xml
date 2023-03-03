@@ -2,17 +2,28 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph.xml">
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/firsttFragment">
+
+
     <fragment
-        android:id="@+id/firstFragment"
-        android:name="com.example.usupbekov_adilet_homework_3_7.FirstFragment"
-        android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
+    android:id="@+id/firsttFragment"
+    android:name="com.example.usupbekov_adilet_homework_3_7.FirsttFragment"
+    android:label="fragment_firstt"
+    tools:layout="@layout/fragment_firstt" >
+
+        <action
+            android:id="@+id/action_firsttFragment_to_secontFragment"
+            app:destination="@id/secontFragment" />
     </fragment>
     <fragment
-        android:id="@+id/srcondFragment"
-       android:name="com.example.usupbekov_adilet_homework_3_7.SecondFragment"
-        android:label="fragment_srcond"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/secontFragment"
+        android:name="com.example.usupbekov_adilet_homework_3_7.SecontFragment"
+        android:label="fragment_secont"
+        tools:layout="@layout/fragment_secont" >
+        <argument
+            android:name="Rm"
+            app:argType="com.example.usupbekov_adilet_homework_3_7.Rm"/>
     </fragment>
+
 </navigation>
